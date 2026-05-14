@@ -33,6 +33,25 @@ remote:
 To https://github.com/Manzi-Elvis/Git.git
  * [new branch]      master -> master
 branch 'master' set up to track 'origin/master'.
-PS C:\Users\elvis\Desktop\Git Learning>
-
+PS C:\Users\elvis\Desktop\Git Learning> git checkout -b dev
+Switched to a new branch 'dev'
+PS C:\Users\elvis\Desktop\Git Learning> git checkout -b test
+Switched to a new branch 'test'
+PS C:\Users\elvis\Desktop\Git Learning> git branch -m master main
+PS C:\Users\elvis\Desktop\Git Learning> git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Manzi-Elvis/Git.git
+   8ce82d6..a6c47a0  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\elvis\Desktop\Git Learning> git checkout dev    
+M       README.md
+Switched to branch 'dev'
+PS C:\Users\elvis\Desktop\Git Learning> git branch -d test
+Deleted branch test (was a6c47a0).
+PS C:\Users\elvis\Desktop\Git Learning> git branch
+* dev
+  main
 ```
+
+
+## Exercise 2:
