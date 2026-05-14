@@ -71,3 +71,90 @@ To https://github.com/Manzi-Elvis/Git-Copy.git
  * [new branch]      main -> main
 PS C:\Users\elvis\Desktop\Git Learning>
 ```
+
+## Exercise 2: 
+
+```bash
+PS C:\Users\elvis\Desktop\Git Learning> git checkout main
+>> 
+M       Solutions/Bundle4.md
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\elvis\Desktop\Git Learning> git pull origin main
+From https://github.com/Manzi-Elvis/Git
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\elvis\Desktop\Git Learning> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\elvis\Desktop\Git Learning> echo "<footer>Footer version 1</footer>" >> index.html
+PS C:\Users\elvis\Desktop\Git Learning> git add index.html
+PS C:\Users\elvis\Desktop\Git Learning> git commit -m "Add footer"
+[ft/footer b73d1f4] Add footer
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\elvis\Desktop\Git Learning> echo "<p>Footer links added</p>" >> index.html
+PS C:\Users\elvis\Desktop\Git Learning> git add index.html
+PS C:\Users\elvis\Desktop\Git Learning> git commit -m "Add footer links"
+[ft/footer 8b656ac] Add footer links
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\elvis\Desktop\Git Learning> git push -u origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 641 bytes | 213.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Manzi-Elvis/Git/pull/new/ft/footer
+remote: 
+To https://github.com/Manzi-Elvis/Git.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+PS C:\Users\elvis\Desktop\Git Learning> git checkout main
+M       Solutions/Bundle4.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\elvis\Desktop\Git Learning> git pull origin main
+From https://github.com/Manzi-Elvis/Git
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\elvis\Desktop\Git Learning> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\elvis\Desktop\Git Learning> git merge --squash ft/footer
+Updating d0187c3..8b656ac
+Fast-forward
+Squash commit -- not updating HEAD
+ index.html | Bin 56 -> 180 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\elvis\Desktop\Git Learning> git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Solutions/Bundle4.md
+
+PS C:\Users\elvis\Desktop\Git Learning> git commit -m "footer changes squashing"
+[ft/squashing 5744fb9] footer changes squashing
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\elvis\Desktop\Git Learning> git push -u origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 391.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Manzi-Elvis/Git/pull/new/ft/squashing
+remote: 
+To https://github.com/Manzi-Elvis/Git.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+PS C:\Users\elvis\Desktop\Git Learning>
+```
