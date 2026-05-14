@@ -1,6 +1,9 @@
 # Git Exercises
 
-## Exercise 1: 
+
+## Bundle 1
+
+### Exercise 1: 
 
 ```bash
 PS C:\Users\elvis\Desktop\Git Learning> git init
@@ -177,4 +180,82 @@ Your branch is up to date with 'origin/dev'.
 
 nothing to commit, working tree clean
 PS C:\Users\elvis\Desktop\Git Learning> 
+```
+
+
+## Bundle 2:
+
+### Exercise 1:
+
+```bash
+PS C:\Users\elvis\Desktop\Git Learning> git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\elvis\Desktop\Git Learning> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\elvis\Desktop\Git Learning> git pull origin main
+From https://github.com/Manzi-Elvis/Git
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\elvis\Desktop\Git Learning> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\elvis\Desktop\Git Learning> echo "<h1>Services Page</h1>" > services.html
+PS C:\Users\elvis\Desktop\Git Learning> git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\elvis\Desktop\Git Learning> git add services.html
+PS C:\Users\elvis\Desktop\Git Learning> git commit -m "Add services page"
+[ft/bundle-2 59f6fee] Add services page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 services.html
+PS C:\Users\elvis\Desktop\Git Learning> git push -u origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 377 bytes | 377.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Manzi-Elvis/Git/pull/new/ft/bundle-2
+remote: 
+To https://github.com/Manzi-Elvis/Git.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+PS C:\Users\elvis\Desktop\Git Learning> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\elvis\Desktop\Git Learning> git pull origin main
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.83 KiB | 98.00 KiB/s, done.
+From https://github.com/Manzi-Elvis/Git
+ * branch            main       -> FETCH_HEAD
+   a6c47a0..c4dd3bf  main       -> origin/main
+Updating a6c47a0..c4dd3bf
+Fast-forward
+ README.md     | 144 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ about.html    | Bin 0 -> 44 bytes
+ home.html     |  11 +++++
+ index.html    |   0
+ services.html | Bin 0 -> 50 bytes
+ 5 files changed, 154 insertions(+), 1 deletion(-)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ delete mode 100644 index.html
+ create mode 100644 services.html
+PS C:\Users\elvis\Desktop\Git Learning>
 ```
