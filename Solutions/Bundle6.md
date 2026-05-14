@@ -152,3 +152,49 @@ To https://github.com/Manzi-Elvis/git-cafe-exercise.git
 PS C:\Users\elvis\Documents\PROJECTS\git-cafe-exercise> 
 ```
 ## Exercise 4:
+
+### Objective - PR Review Exercise
+
+Review Pull Requests from peers, request changes, approve the updated work, and merge the PRs.
+
+---
+
+### Steps I Followed
+
+#### 1. Accessed Peer Pull Requests
+
+Received access/review permissions to peer repositories and opened their Pull Requests on GitHub.
+
+---
+
+#### 2. Reviewed the Code
+
+Checked the modified files and analyzed the changes made in the PRs.
+
+---
+
+#### 3. Requested Changes
+
+Used the GitHub review system to request improvements and suggest corrections where necessary.
+
+---
+
+#### 4. Re-Reviewed Updated Changes
+
+After the requested changes were applied, I reviewed the updated code again to confirm everything was correct.
+
+---
+
+#### 5. Approved and Merged the PRs
+
+Approved the Pull Requests and merged them into the main branch.
+
+---
+
+#### Skills Practiced
+
+- Pull Request reviews
+- Team collaboration workflow
+- Requesting code changes
+- PR approval process
+- Merge workflow on GitHub
